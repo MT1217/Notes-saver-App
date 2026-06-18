@@ -13,7 +13,13 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: [
+        'http://localhost:5173', // Keep this so you can still test locally
+        'https://notes-saver-app-gold.vercel.app' // Replace with your exact Vercel URL (NO trailing slash!)
+    ],
+    credentials: true
+}));
 app.use(express.json()); // Allows us to accept JSON data in the body
 app.use(express.urlencoded({ extended: false }));
 
