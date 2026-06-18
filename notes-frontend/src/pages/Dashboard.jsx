@@ -5,7 +5,7 @@ import { LogOut, Plus, Trash2, Edit3, Eye } from 'lucide-react';
 import axios from 'axios';
 import NoteModal from '../components/NoteModal';
 
-const API_URL = 'http://localhost:5000/api/notes';
+const API_URL = 'https://notes-saver-app-d9d9.onrender.com';
 
 export default function Dashboard() {
   const { user, logout } = useAuth();

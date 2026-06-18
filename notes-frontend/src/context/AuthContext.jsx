@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (userData) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', userData);
+      const response = await axios.post('https://notes-saver-app-d9d9.onrender.com/api/auth/login', userData);
       localStorage.setItem('user', JSON.stringify(response.data));
       setUser(response.data);
       return { success: true };
@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (userData) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', userData);
+      const response = await axios.post('https://notes-saver-app-d9d9.onrender.com/api/auth/register', userData);
       localStorage.setItem('user', JSON.stringify(response.data));
       setUser(response.data);
       return { success: true };
